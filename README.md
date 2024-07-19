@@ -1,5 +1,5 @@
 # CONFIGURACIÓN ZMK TECLADO CORNER
-(Editor en linea codigo ZMK)[https://nickcoutsos.github.io/keymap-editor/]
+[Editor en linea codigo ZMK](https://nickcoutsos.github.io/keymap-editor/)
 ## KEYMAPS
 
 ### LAYOUT-DEFAULT
