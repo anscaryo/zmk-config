@@ -26,6 +26,20 @@
             bindings = <&kp RA(KP_NUMBER_9) &kp RA(KP_NUMBER_3)>;
             label = "RCORCHETES";
         };
+
+        minor: minor {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(KP_NUMBER_6)>;
+            label = "MINOR";
+        };
+
+        mayor: mayor {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp KP_NUMBER_6>;
+            label = "MAYOR";
+        };
     };
 
     keymap {
@@ -54,10 +68,10 @@
             //                     | GUI |     | SPC |     | ENT | MO3 | ALT |
 
             bindings = <
-&kp ESCAPE  &kp N1  &kp N2  &kp N3    &kp N4   &kp N5       &kp N6                &kp N7         &kp N8        &kp N9        &kp N0         &kp BSPC
-&kp F1      &kp F2  &kp F3  &kp F4    &kp F5   &kp F6       &kp LEFT              &kp DOWN       &kp UP        &kp RIGHT     &trans         &kp ASTERISK
-&kp F7      &kp F8  &kp F9  &kp F10   &kp F11  &kp F12      &kp RA(SINGLE_QUOTE)  &kp RA(GRAVE)  &kp RA(RBRC)  &kp RA(NUHS)  &kp RA(GRAVE)  &kp RIGHT_SHIFT
-                            &kp LGUI  &trans   &kp SPACE    &kp RET               &mo 3          &kp RALT
+&kp ESCAPE  &kp N1  &kp N2  &kp N3    &kp N4   &kp N5       &kp N6                &kp N7      &kp N8       &kp N9        &kp N0         &kp BSPC
+&kp F1      &kp F2  &kp F3  &kp F4    &kp F5   &kp F6       &kp LEFT              &kp DOWN    &kp UP       &kp RIGHT     &trans         &kp ASTERISK
+&kp F7      &kp F8  &kp F9  &kp F10   &kp F11  &kp F12      &kp RA(SINGLE_QUOTE)  &corchetes  &Rcorchetes  &kp RA(NUHS)  &kp RA(GRAVE)  &kp RIGHT_SHIFT
+                            &kp LGUI  &trans   &kp SPACE    &kp RET               &mo 3       &kp RALT
             >;
         };
 
@@ -69,10 +83,10 @@
             //                       | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB         &kp EXCL              &kp AT    &kp HASH      &kp DLLR           &kp PRCNT     &kp CARET  &kp AMPS       &kp ASTRK  &kp LPAR       &kp RPAR       &kp SQT
-&kp LEFT_SHIFT  &trans                &trans    &trans        &kp K_VOLUME_UP    &trans        &kp HOME   &kp PAGE_DOWN  &kp PG_UP  &kp END        &kp BSLH       &kp GRAVE
-&kp LCTRL       &kp LS(GREATER_THAN)  &kp NUBS  &trans        &kp K_VOLUME_DOWN  &kp C_MUTE    &kp NUHS   &kp PLUS       &kp SLASH  &kp LS(EQUAL)  &kp LS(MINUS)  &kp LS(GRAVE)
-                                                &kp LEFT_ALT  &mo 3              &kp SPACE     &kp RET    &trans         &kp DEL
+&kp TAB         &kp EXCL  &kp AT    &kp HASH      &kp DLLR           &kp PRCNT     &kp CARET  &kp AMPS           &kp ASTRK  &kp LPAR       &kp RPAR       &kp SQT
+&kp LEFT_SHIFT  &trans    &trans    &trans        &kp K_VOLUME_UP    &trans        &kp HOME   &kp PAGE_DOWN      &kp PG_UP  &kp END        &kp BSLH       &kp GRAVE
+&kp LCTRL       &minor    &kp NUBS  &trans        &kp K_VOLUME_DOWN  &kp C_MUTE    &kp NUHS   &kp RIGHT_BRACKET  &kp SLASH  &kp LS(EQUAL)  &kp LS(MINUS)  &kp LS(GRAVE)
+                                    &kp LEFT_ALT  &mo 3              &kp SPACE     &kp RET    &trans             &kp DEL
             >;
         };
 
