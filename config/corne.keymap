@@ -17,13 +17,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp RALT>,
+                <&macro_press &kp RALT>,
                 <&macro_tap>,
                 <&kp KP_NUMBER_9 &kp KP_NUMBER_1>,
-                <&macro_release>,
-                <&kp RALT>;
-
+                <&macro_release &kp RALT>,
             label = "LCORCHETES";
         };
 
