@@ -23,7 +23,7 @@
                 ;
         };
 
-        LCorchetes: LCorchetes {
+        /* LCorchetes: LCorchetes {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -73,7 +73,7 @@
                 <&kp RALT>;
 
             label = "MAYOR";
-        };
+        };*/
     };
 
     keymap {
