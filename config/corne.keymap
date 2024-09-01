@@ -12,15 +12,6 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-    macros {
-        prueba_texto: prueba_texto {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp LS(E) &kp S &kp T &kp O &kp SPACE &kp E &kp S &kp SPACE &kp U &kp N &kp A &kp SPACE &kp P &kp R &kp U &kp E &kp B &kp A &kp SPACE &kp D &kp E &kp SPACE &kp T &kp E &kp X &kp T &kp O &kp COMMA &kp SPACE &kp G &kp R &kp A &kp C &kp I &kp A &kp S &kp SPACE &kp P &kp O &kp R &kp SPACE &kp P &kp A &kp R &kp T &kp I &kp C &kp I &kp P &kp A &kp R &kp DOT>;
-            label = "PRUEBA_TEXTO";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -63,18 +54,18 @@
 
             bindings = <
 &kp TAB         &kp EXCL  &kp AT        &kp HASH      &kp DLLR           &kp PRCNT     &kp CARET  &kp AMPS           &kp ASTRK  &kp LPAR       &kp RPAR       &kp SQT
-&kp LEFT_SHIFT  &trans    &trans        &trans        &kp K_VOLUME_UP    &trans        &kp HOME   &kp PAGE_DOWN      &kp PG_UP  &kp END        &kp BSLH       &kp GRAVE
-&kp LCTRL       &kp NUBS  &kp LS(NUBS)  &trans        &kp K_VOLUME_DOWN  &kp C_MUTE    &kp NUHS   &kp RIGHT_BRACKET  &kp SLASH  &kp LS(EQUAL)  &kp LS(MINUS)  &kp LS(GRAVE)
+&kp LEFT_SHIFT  &none     &none         &none         &kp K_VOLUME_UP    &none         &kp HOME   &kp PAGE_DOWN      &kp PG_UP  &kp END        &kp BSLH       &kp GRAVE
+&kp LCTRL       &kp NUBS  &kp LS(NUBS)  &none         &kp K_VOLUME_DOWN  &kp C_MUTE    &kp NUHS   &kp RIGHT_BRACKET  &kp SLASH  &kp LS(EQUAL)  &kp LS(MINUS)  &kp LS(GRAVE)
                                         &kp LEFT_ALT  &mo 3              &kp SPACE     &kp RET    &trans             &kp DEL
             >;
         };
 
         bluethooth {
             bindings = <
-&out OUT_TOG  &trans        &trans           &trans           &trans           &prueba_texto      &trans  &trans  &trans  &trans  &trans  &bootloader
-&bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &trans  &trans  &trans  &trans  &trans  &trans
-&kp RCTRL     &trans        &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG    &trans  &trans  &trans  &trans  &trans  &mkp LCLK
-                                             &trans           &trans           &trans             &trans  &trans  &trans
+&out OUT_TOG  &trans        &trans           &trans           &trans           &bt BT_CLR_ALL     &kp PRINTSCREEN  &trans  &trans  &trans  &trans  &bootloader
+&bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &trans           &trans  &trans  &trans  &trans  &trans
+&kp RCTRL     &trans        &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG    &trans           &trans  &trans  &trans  &trans  &mkp LCLK
+                                             &trans           &trans           &trans             &trans           &trans  &trans
             >;
 
             label = "3";
