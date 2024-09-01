@@ -18,7 +18,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp RIGHT_ALT &kp KP_NUMBER_9 &kp KP_NUMBER_1>;
+                <&kp RIGHT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_9 &kp KP_NUMBER_1>,
+                <&macro_release>,
+                <&kp RIGHT_ALT>;
 
             label = "NEW_MACRO";
         };
