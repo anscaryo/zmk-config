@@ -16,28 +16,28 @@
         corchetes: corchetes {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RA(KP_NUMBER_9) &kp RA(KP_NUMBER_1)>;
+            bindings = <&kp RA(KP_NUMBER_9 KP_NUMBER_1)>;
             label = "CORCHETES";
         };
 
         Rcorchetes: Rcorchetes {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RA(KP_NUMBER_9) &kp RA(KP_NUMBER_3)>;
+            bindings = <&kp RA(KP_NUMBER_9 KP_NUMBER_3)>;
             label = "RCORCHETES";
         };
 
         minor: minor {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RA(KP_NUMBER_6)>;
+            bindings = <&kp RA(KP_NUMBER_6 KP_NUMBER_0)>;
             label = "MINOR";
         };
 
         mayor: mayor {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp KP_NUMBER_6>;
+            bindings = <&kp KP_NUMBER_6 KP_NUMBER_3>;
             label = "MAYOR";
         };
     };
