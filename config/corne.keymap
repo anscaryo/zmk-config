@@ -36,30 +36,30 @@
         lower_layer {
             // -----------------------------------------------------------------------------------------
             // | ESC |  1  |  2  |  3  |  4  |  5  |         |  6  |  7  |  8  |  9  |  0  |  DEL |
-            // |  F1 |  F2 |  F3 |  F4 |  F5 |  F6 |         | LFT | DWN |  UP | RGT |  ^  |   +  |
+            // |  F1 |  F2 |  F3 |  F4 |  F5 |  F6 |         | LFT | DWN |  UP | RGT |  ^  |   *  |
             // |  F7 |  F8 |  F9 | F10 | F11 | F12 |         |  {  |  [  |  ]  |  }  |  \  | RSHIFT |
             //                     | GUI |     | SPC |     | ENT | MO3 | ALT |
 
             bindings = <
-&kp ESCAPE  &kp N1  &kp N2  &kp N3    &kp N4   &kp N5       &kp N6                &kp N7      &kp N8      &kp N9        &kp N0         &kp DEL
-&kp F1      &kp F2  &kp F3  &kp F4    &kp F5   &kp F6       &kp LEFT              &kp DOWN    &kp UP      &kp RIGHT     &kp ES_CARET   &kp LS(KP_PLUS)
-&kp F7      &kp F8  &kp F9  &kp F10   &kp F11  &kp F12      &kp RA(SINGLE_QUOTE)  &kp RA(N8)  &kp RA(N9)  &kp RA(NUHS)  &kp ES_BSLH    &kp RIGHT_SHIFT
-                            &kp LGUI  &trans   &kp SPACE    &kp RET               &mo 3       &kp RALT
+&kp ESCAPE  &kp N1  &kp N2  &kp N3    &kp N4   &kp N5             &kp N6       &kp N7       &kp N8       &kp N9       &kp N0         &kp DEL
+&kp F1      &kp F2  &kp F3  &kp F4    &kp F5   &kp F6             &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp ES_CARET   &kp ES_STAR
+&kp F7      &kp F8  &kp F9  &kp F10   &kp F11  &kp F12            &kp ES_LBRC  &kp ES_LBKT  &kp ES_RBKT  &kp ES_RBRC  &kp ES_BSLH    &kp RIGHT_SHIFT
+                              &kp LGUI  &trans   &kp SPACE     &kp RET  &mo 3  &kp RALT
             >;
         };
 
         raise_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB  |  !  |  @  |  #  |  $  |  %  |       |  ^   |   &   |   *   |  (  |  )  | BKSP |
-            // | LSHFT |     |     |     |     |     |       | HOME | PG-DN | PG_UP | END |  \  |  `   |
-            // | LCTRL |  <  |  >  |     |     |     |       |   _  |   +   |   {   |  }  | "|" |  ~   |
-            //                       | GUI |     | SPC |   | ENT |     | ALT |
+            // |  TAB  |  !  |  @  |  #  |  $  |  %  |       |   &  |   /   |   (   |  )  |  =  | BKSP |
+            // | LSHFT |     |     |     |     |     |       | HOME | PG-DN | PG_UP | END |  ç  |  º   |
+            // | LCTRL |  <  |  >  | VLM-| VLM+| MTE |       | "|"  |   +   |   ¡   |  ¿  |  ?  |  ª   |
+            //                       | lAlt |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB         &kp EXCL  &kp AT        &kp HASH      &kp DLLR           &kp PRCNT     &kp CARET  &kp AMPS           &kp ASTRK  &kp LPAR       &kp RPAR       &kp SQT
-&kp LEFT_SHIFT  &none     &none         &none         &kp K_VOLUME_UP    &none         &kp HOME   &kp PAGE_DOWN      &kp PG_UP  &kp END        &kp BSLH       &kp GRAVE
-&kp LCTRL       &kp NUBS  &kp LS(NUBS)  &none         &kp K_VOLUME_DOWN  &kp C_MUTE    &kp NUHS   &kp RIGHT_BRACKET  &kp SLASH  &kp LS(EQUAL)  &kp LS(MINUS)  &kp LS(GRAVE)
-                                        &kp LEFT_ALT  &mo 3              &kp SPACE     &kp RET    &trans             &kp DEL
+&kp TAB    &kp ES_EXCL  &kp ES_DQT    &kp ES_HASH  &kp ES_DOLLAR  &kp ES_PRCNT           &kp ES_AMPS  &kp ES_FSLH    &kp ES_LPAR   &kp ES_RPAR    &kp ES_EQUAL   &kp SQT
+&kp LSHFT  &none        &none         &none        &kp K_VOLUME_UP    &none              &kp HOME     &kp PAGE_DOWN  &kp PG_UP     &kp END        &kp BSLH       &kp ES_ORDM
+&kp LCTRL  &kp NUBS     &kp LS(NUBS)  &none        &kp K_VOLUME_DOWN  &kp C_MUTE         &kp ES_PIPE  &kp ES_PLUS    &kp ES_IEXCL  &kp ES_IQMARK  &kp ES_QMARK   &kp ES_ORDF
+                                                    &kp LEFT_ALT  &mo 3  &kp SPACE     &kp RET  &trans  &kp DEL
             >;
         };
 
