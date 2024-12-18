@@ -12,6 +12,7 @@
 #include <dt-bindings/zmk/rgb.h>
 #include "keys_es.h"
 #define ES_CARET (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_LEFT_BRACE)))
+#define S_CAPS (LEFT_SHIFT CAPSLOCK)
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -19,29 +20,30 @@
         default_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB        |  Q  |  W  |  E  |  R  |  T  |        |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | LSHIFT/CAPS |  A  |  S  |  D  |  F  |  G  |        |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | LCTRL       |  Z  |  X  |  C  |  V  |  B  |        |  N  |  M   |  ,  |  .  |  /  | ENT  |
+            // | LSHIFT/CAPS |  A  |  S  |  D  |  F  |  G  |        |  H  |  J   |  K  |  L  |  ;  |  ´   |
+            // | LCTRL       |  Z  |  X  |  C  |  V  |  B  |        |  N  |  M   |  ,  |  .  |  -  | ENT  |
             //                              | GUI | LWR | SPC |  | SPC | RSE  | RALT |
 
             bindings = <
-&kp TAB                  &kp ES_Q  &kp ES_W  &kp ES_E     &kp ES_R  &kp ES_T        &kp ES_Y      &kp ES_U  &kp ES_I      &kp ES_O    &kp ES_P     &kp BSPC
-&mt LEFT_SHIFT CAPSLOCK  &kp ES_A  &kp ES_S  &kp ES_D     &kp ES_F  &kp ES_G        &kp ES_H      &kp ES_J  &kp ES_K      &kp ES_L    &kp SEMI     &kp SQT
-&kp LCTRL                &kp ES_Z  &kp ES_X  &kp ES_C     &kp ES_V  &kp ES_B        &kp ES_N      &kp ES_M  &kp COMMA     &kp DOT     &kp FSLH     &mt RIGHT_SHIFT ENTER
+&kp TAB     &kp ES_Q  &kp ES_W  &kp ES_E  &kp ES_R  &kp ES_T        &kp ES_Y  &kp ES_U  &kp ES_I  &kp ES_O  &kp ES_P  &kp BSPC
+/*&mt LEFT_SHIFT CAPSLOCK  &kp ES_A  &kp ES_S  &kp ES_D  &kp ES_F  &kp ES_G        &kp ES_H  &kp ES_J  &kp ES_K   &kp ES_L  &kp SEMI  &kp SQT */
+&mt S_CAPS  &kp ES_A  &kp ES_S  &kp ES_D  &kp ES_F  &kp ES_G        &kp ES_H  &kp ES_J  &kp ES_K  &kp ES_L  &kp SEMI  &kp SQT
+&kp LCTRL   &kp ES_Z  &kp ES_X  &kp ES_C  &kp ES_V  &kp ES_B        &kp ES_N  &kp ES_M  &kp COMMA  &kp DOT   &kp FSLH  &mt RIGHT_SHIFT ENTER
                                                      &kp LGUI  &mo 1  &kp SPACE   &kp SPACE  &mo 2  &kp RALT
             >;
         };
 
         lower_layer {
             // -----------------------------------------------------------------------------------------
-            // | ESC |  1  |  2  |  3  |  4  |  5  |         |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // |  F1 |  F2 |  F3 |  F4 |  F5 |  F6 |         | LFT | DWN |  UP | RGT |  ^  |   *  |
-            // |  F7 |  F8 |  F9 | F10 | F11 | F12 |         |  {  |  [  |  ]  |  }  |     | RSHIFT |
+            // | ESC |  1  |  2  |  3  |  4  |  5  |         |  6  |  7  |  8  |  9  |  0  |  DEL |
+            // |  F1 |  F2 |  F3 |  F4 |  F5 |  F6 |         | LFT | DWN |  UP | RGT |  ^  |   +  |
+            // |  F7 |  F8 |  F9 | F10 | F11 | F12 |         |  {  |  [  |  ]  |  }  |  \  | RSHIFT |
             //                     | GUI |     | SPC |     | ENT | MO3 | ALT |
 
             bindings = <
 &kp ESCAPE  &kp N1  &kp N2  &kp N3    &kp N4   &kp N5       &kp N6                &kp N7      &kp N8      &kp N9        &kp N0         &kp DEL
-&kp F1      &kp F2  &kp F3  &kp F4    &kp F5   &kp F6       &kp LEFT              &kp DOWN    &kp UP      &kp RIGHT     &kp GRAVE      &kp LS(KP_PLUS)
-&kp F7      &kp F8  &kp F9  &kp F10   &kp F11  &kp F12      &kp RA(SINGLE_QUOTE)  &kp RA(N8)  &kp RA(N9)  &kp RA(NUHS)  &kp ES_CARET   &kp RIGHT_SHIFT
+&kp F1      &kp F2  &kp F3  &kp F4    &kp F5   &kp F6       &kp LEFT              &kp DOWN    &kp UP      &kp RIGHT     &kp ES_CARET   &kp LS(KP_PLUS)
+&kp F7      &kp F8  &kp F9  &kp F10   &kp F11  &kp F12      &kp RA(SINGLE_QUOTE)  &kp RA(N8)  &kp RA(N9)  &kp RA(NUHS)  &kp ES_BSLH    &kp RIGHT_SHIFT
                             &kp LGUI  &trans   &kp SPACE    &kp RET               &mo 3       &kp RALT
             >;
         };
