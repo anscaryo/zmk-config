@@ -56,9 +56,9 @@
             //                       | lAlt |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp ES_EXCL  &kp ES_DQT   &kp ES_HASH  &kp ES_DOLLAR  &kp ES_PRCNT           &kp ES_AMPS  &kp ES_FSLH    &kp ES_LPAR   &kp ES_RPAR    &kp ES_EQUAL   &kp SQT
-&kp LSHFT  &none        &kb ES_EURO  &none        &kp K_VOLUME_UP    &none              &kp HOME     &kp PAGE_DOWN  &kp PG_UP     &kp END        &kp BSLH       &kp ES_ORDM
-&kp LCTRL  &kp ES_LT    &kp ES_GT    &none        &kp K_VOLUME_DOWN  &kp C_MUTE         &kp ES_PIPE  &kp ES_PLUS    &kp ES_IEXCL  &kp ES_IQMARK  &kp ES_QMARK   &kp ES_ORDF
+&kp TAB    &kp ES_EXCL  &kp ES_DQT  &kp ES_HASH  &kp ES_DOLLAR  &kp ES_PRCNT           &kp ES_AMPS  &kp ES_FSLH    &kp ES_LPAR   &kp ES_RPAR    &kp ES_EQUAL   &kp SQT
+&kp LSHFT  &none        &none       &none        &kp K_VOLUME_UP    &none              &kp HOME     &kp PAGE_DOWN  &kp PG_UP     &kp END        &kp BSLH       &kp ES_ORDM
+&kp LCTRL  &kp ES_LT    &kp ES_GT   &none        &kp K_VOLUME_DOWN  &kp C_MUTE         &kp ES_PIPE  &kp ES_PLUS    &kp ES_IEXCL  &kp ES_IQMARK  &kp ES_QMARK   &kp ES_ORDF
                                                     &kp LEFT_ALT  &mo 3  &kp SPACE     &kp RET  &trans  &kp DEL
             >;
         };
