@@ -4,16 +4,20 @@
  * SPDX-License-Identifier: MIT
  */
 //  Archivo creado para el teclado Corne modificado mediante nice-nano v2 de aliespress
+
+#include <dt-bindings/zmk/mouse.h>
+#include "keys_es.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
-#include "keys_es.h"
+
 #define ES_CARET (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_LEFT_BRACE)))
 #define CAPS CAPSLOCK
-#define LSHFT LEFT_SHIFT 
+#define LSHFT LEFT_SHIFT
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -26,10 +30,10 @@
             //                              | GUI | LWR | SPC |  | SPC | RSE  | RALT |
 
             bindings = <
-&kp TAB     &kp ES_Q  &kp ES_W  &kp ES_E  &kp ES_R  &kp ES_T        &kp ES_Y  &kp ES_U  &kp ES_I  &kp ES_O  &kp ES_P  &kp BSPC
-&mt LSHFT CAPS  &kp ES_A  &kp ES_S  &kp ES_D  &kp ES_F  &kp ES_G        &kp ES_H  &kp ES_J  &kp ES_K  &kp ES_L  &kp SEMI  &kp SQT
-&kp LCTRL   &kp ES_Z  &kp ES_X  &kp ES_C  &kp ES_V  &kp ES_B        &kp ES_N  &kp ES_M  &kp COMMA  &kp DOT   &kp FSLH  &mt RIGHT_SHIFT ENTER
-                                                     &kp LGUI  &mo 1  &kp SPACE   &kp SPACE  &mo 2  &kp RALT
+&kp TAB         &kp ES_Q  &kp ES_W  &kp ES_E  &kp ES_R  &kp ES_T     &kp ES_Y   &kp ES_U  &kp ES_I   &kp ES_O  &kp ES_P  &kp BSPC
+&mt LSHFT CAPS  &kp ES_A  &kp ES_S  &kp ES_D  &kp ES_F  &kp ES_G     &kp ES_H   &kp ES_J  &kp ES_K   &kp ES_L  &kp SEMI  &kp SQT
+&kp LCTRL       &kp ES_Z  &kp ES_X  &kp ES_C  &kp ES_V  &kp ES_B     &kp ES_N   &kp ES_M  &kp COMMA  &kp DOT   &kp FSLH  &mt RIGHT_SHIFT ENTER
+                                    &kp LGUI  &mo 1     &kp SPACE    &kp SPACE  &mo 2     &kp RALT
             >;
         };
 
@@ -41,10 +45,10 @@
             //                     | GUI |     | SPC |     | ENT | MO3 | ALT |
 
             bindings = <
-&kp ESCAPE  &kp N1  &kp N2  &kp N3    &kp N4   &kp N5             &kp N6       &kp N7       &kp N8       &kp N9       &kp N0         &kp DEL
-&kp F1      &kp F2  &kp F3  &kp F4    &kp F5   &kp F6             &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp ES_CARET   &kp ES_STAR
-&kp F7      &kp F8  &kp F9  &kp F10   &kp F11  &kp F12            &kp ES_LBRC  &kp ES_LBKT  &kp ES_RBKT  &kp ES_RBRC  &kp ES_BSLH    &kp RIGHT_SHIFT
-                              &kp LGUI  &trans   &kp SPACE     &kp RET  &mo 3  &kp RALT
+&kp ESCAPE  &kp N1  &kp N2  &kp N3    &kp N4   &kp N5       &kp N6       &kp N7       &kp N8       &kp N9       &kp N0        &kp DEL
+&kp F1      &kp F2  &kp F3  &kp F4    &kp F5   &kp F6       &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp ES_CARET  &kp ES_STAR
+&kp F7      &kp F8  &kp F9  &kp F10   &kp F11  &kp F12      &kp ES_LBRC  &kp ES_LBKT  &kp ES_RBKT  &kp ES_RBRC  &kp ES_BSLH   &kp RIGHT_SHIFT
+                            &kp LGUI  &trans   &kp SPACE    &kp RET      &mo 3        &kp RALT
             >;
         };
 
@@ -56,18 +60,18 @@
             //                       | lAlt |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp ES_EXCL  &kp ES_DQT   &kp ES_HASH  &kp ES_DOLLAR  &kp ES_PRCNT           &kp ES_AMPS  &kp ES_FSLH    &kp ES_LPAR   &kp ES_RPAR    &kp ES_EQUAL   &kp SQT
-&kp LSHFT  &none        &kp ES_EURO  &none        &kp K_VOLUME_UP    &none              &kp HOME     &kp PAGE_DOWN  &kp PG_UP     &kp END        &kp BSLH       &kp ES_ORDM
-&kp LCTRL  &kp ES_LT    &kp ES_GT    &none        &kp K_VOLUME_DOWN  &kp C_MUTE         &kp ES_PIPE  &kp ES_PLUS    &kp ES_IEXCL  &kp ES_IQMARK  &kp ES_QMARK   &kp ES_ORDF
-                                                    &kp LEFT_ALT  &mo 3  &kp SPACE     &kp RET  &trans  &kp DEL
+&kp TAB    &kp ES_EXCL  &kp ES_DQT   &kp ES_HASH   &kp ES_DOLLAR      &kp ES_PRCNT    &kp ES_AMPS  &kp ES_FSLH    &kp ES_LPAR   &kp ES_RPAR    &kp ES_EQUAL  &kp SQT
+&kp LSHFT  &none        &kp ES_EURO  &none         &kp K_VOLUME_UP    &none           &kp HOME     &kp PAGE_DOWN  &kp PG_UP     &kp END        &kp BSLH      &kp ES_ORDM
+&kp LCTRL  &kp ES_LT    &kp ES_GT    &none         &kp K_VOLUME_DOWN  &kp C_MUTE      &kp ES_PIPE  &kp ES_PLUS    &kp ES_IEXCL  &kp ES_IQMARK  &kp ES_QMARK  &kp ES_ORDF
+                                     &kp LEFT_ALT  &mo 3              &kp SPACE       &kp RET      &trans         &kp DEL
             >;
         };
 
         bluethooth {
             bindings = <
-&out OUT_TOG  &trans        &trans           &trans           &trans           &bt BT_CLR_ALL     &kp PRINTSCREEN  &trans  &trans  &trans  &trans     &bootloader
-&bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &trans           &trans  &trans  &trans  &trans     &trans
-&kp RCTRL     &trans        &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG    &trans           &trans  &trans  &trans  &mkp LCLK  &mkp RCLK
+&out OUT_TOG  &trans        &trans           &trans           &trans           &bt BT_CLR_ALL     &kp PRINTSCREEN  &trans  &trans  &trans  &trans        &bootloader
+&bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &trans           &trans  &trans  &trans  &kp ES_GRAVE  &trans
+&kp RCTRL     &trans        &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG    &trans           &trans  &trans  &trans  &mkp LCLK     &mkp RCLK
                                              &trans           &trans           &trans             &trans           &trans  &trans
             >;
 
