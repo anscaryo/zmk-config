@@ -66,12 +66,14 @@
                                      &kp LEFT_ALT  &mo 3              &kp SPACE       &kp RET      &trans         &kp DEL
             >;
         };
-//  Añado ES_GRAVE, para añadir el acento invertido.
+
+        //  Añado ES_GRAVE, para añadir el acento invertido.
+
         bluethooth {
             bindings = <
-&out OUT_TOG  &trans        &trans           &trans           &trans           &bt BT_CLR_ALL     &kp PRINTSCREEN  &trans  &trans  &trans  &trans        &bootloader
-&bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &trans           &trans  &trans  &trans  &kp ES_GRAVE  &trans
-&kp RCTRL     &trans        &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG    &trans           &trans  &trans  &trans  &mkp LCLK     &mkp RCLK
+&out OUT_TOG  &trans        &kp ES_GRAVE     &trans           &trans           &bt BT_CLR_ALL     &kp PRINTSCREEN  &trans  &trans  &trans  &trans     &bootloader
+&bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &trans           &trans  &trans  &trans  &trans     &trans
+&kp RCTRL     &trans        &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG    &trans           &trans  &trans  &trans  &mkp LCLK  &mkp RCLK
                                              &trans           &trans           &trans             &trans           &trans  &trans
             >;
 
